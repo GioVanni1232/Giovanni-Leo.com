@@ -5,27 +5,7 @@ const darkToggler = document.querySelector(".dark");
 const darkTogglerImg = document.querySelector(".dark img");
 const body = document.querySelector("body");
 const timelines = document.querySelectorAll(".timeline ul li div");
-const root = document.querySelector("body");
 
-//Custom Cursor
-const cursor = document.createElement("span");
-cursor.className = "custom-cursor";
-root.appendChild(cursor);
-
-window.addEventListener("mousemove", (e) => {
-  const logo = e.target.closest(".interactable");
-  let interacting = logo !== null;
-
-  if (interacting) {
-    cursor.classList.add("interacting");
-  } else {
-    cursor.classList.remove("interacting");
-  }
-
-  let x = e.clientX;
-  let y = e.clientY;
-  cursor.style.transform = `translate(${x}px, ${y}px)`;
-});
 
 //Timeline reveal class
 if (window.innerWidth <= 674) {
